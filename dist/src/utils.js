@@ -11,12 +11,11 @@ var PinResultStatus;
     PinResultStatus["locked"] = "locked";
 })(PinResultStatus = exports.PinResultStatus || (exports.PinResultStatus = {}));
 exports.hasPinCode = async (serviceName) => {
-    return await Keychain.getInternetCredentials(serviceName).then(res => {
-        return !!res && !!res.password;
-    });
+    const res = await Keychain.getGenericPassword();
+    return !!res && !!res.password;
 };
 exports.deletePinCode = async (serviceName) => {
-    return await Keychain.resetInternetCredentials(serviceName);
+    return await Keychain.resetGenericPassword();
 };
 exports.resetInternalStates = async (asyncStorageKeys) => {
     return await async_storage_1.default.multiRemove(asyncStorageKeys);

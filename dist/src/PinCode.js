@@ -485,7 +485,7 @@ const styles = react_native_1.StyleSheet.create({
         flexDirection: "column",
         justifyContent: "flex-end",
         alignItems: "center",
-        flex: 2
+        flex: 1.5
     },
     row: {
         flex: 0,
@@ -545,7 +545,7 @@ const styles = react_native_1.StyleSheet.create({
         textAlign: "center"
     },
     flexCirclePassword: {
-        flex: 2,
+        flex: 1,
         justifyContent: "center",
         alignItems: "center"
     },
